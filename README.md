@@ -1,22 +1,15 @@
-# Beta Code Converter
+# Polytonic Keyboard
 
-This is an interactive website for converting between Greek unicode and beta code.
+This is a virtual keyboard that can be used to type polytonic Greek on systems that lack native support.
 
 ## Try it Out
 
-[https://apps.perseids.org/beta-code/](https://apps.perseids.org/beta-code/)
+[https://apps.perseids.org/polytonic/](https://apps.perseids.org/polytonic/)
 
 ### How to Use
 
-Type a word in one of the columns and it will convert it to the other format.
-
-### Beta code
-
-Beta code is a system for encoding ancient Greek text using ASCII characters.
-For more information, see:
-
-- [https://en.wikipedia.org/wiki/Beta\_Code](https://en.wikipedia.org/wiki/Beta_Code)
-- [http://www.tlg.uci.edu/encoding/](http://www.tlg.uci.edu/encoding/)
+Click on the keys in the virtual keyboard and the characters will appear in the text area above.
+The `copy` button in place of the right shift will copy the text to the clipboard.
 
 ## Installation
 
@@ -33,8 +26,8 @@ Then run the command `PUBLIC_URL='./path/of/app' yarn build`.
 This will generate a set of static files in the `build/` directory that you can serve.
 
 For example, if you want to deploy it at `www.example.com/` then run `PUBLIC_URL='./' yarn build`.
-If you want to deploy it at `www.example.com/beta` then run
-`PUBLIC_URL='./beta' yarn build`.
+If you want to deploy it at `www.example.com/polytonic` then run
+`PUBLIC_URL='./polytonic' yarn build`.
 
 ## Running tests
 

@@ -14,6 +14,16 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
+      The Open Graph protocol allows links to be expanded by Twitter, Facebook, and other platforms.
+      The variables specified here (and in title) are located in .env
+    -->
+    <meta property="og:image" content="%REACT_APP_IMAGE_URL%" />
+    <meta property="og:site_name" content="%REACT_APP_SITE_NAME%" />
+    <meta property="og:type" content="object" />
+    <meta property="og:title" content="%REACT_APP_TITLE%" />
+    <meta property="og:description" content="%REACT_APP_DESCRIPTION%" />
+    <meta property="og:url" content="%REACT_APP_URL%" />
+    <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
