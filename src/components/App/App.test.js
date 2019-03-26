@@ -8,7 +8,7 @@ it('renders without crashing', () => {
   const keyboardDiv = window.document.createElement('div');
 
   keyboardDiv.className += 'react-simple-keyboard';
-  document.body.appendChild(keyboardDiv);
+  window.document.body.appendChild(keyboardDiv);
 
   render(<App />, div);
 });

@@ -1,6 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import Keyboard from 'react-simple-keyboard';
 
+// see https://github.com/yannickcr/eslint-plugin-react/issues/2209
+/* eslint-disable react/no-unused-state */
+
 const layout = {
   default: [
     '` 1 2 3 4 5 6 7 8 9 0 \u0313\u0342 \u0313\u0300 {bksp}',
@@ -15,8 +18,8 @@ const layout = {
     '{lock} Α Σ Δ Φ Γ Η Ξ Κ Λ \u0308 \u0314 {enter}',
     '{shift} Ζ Χ Ψ Ω Β Ν Μ < > \u0314\u0301 {copy}',
     '.com @ {space}',
-  ]
-}
+  ],
+};
 
 const display = {
   '{copy}': 'copy',
@@ -40,9 +43,10 @@ class Input extends Component {
   constructor(props) {
     super(props);
 
-    this.handleChange = this.handleChange.bind(this)
-    this.handleKeyboardChange = this.handleKeyboardChange.bind(this)
-    this.handleKeyPress = this.handleKeyPress.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleKeyboardChange = this.handleKeyboardChange.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.copyTextarea = this.copyTextarea.bind(this);
   }
 
   handleChange(event) {
@@ -50,7 +54,7 @@ class Input extends Component {
     const { setInput } = this.keyboardRef.keyboard;
 
     this.setState({ value }, () => setInput(value));
-  };
+  }
 
   handleKeyboardChange(value) {
     const { caretPosition } = this.keyboardRef.keyboard;
@@ -61,20 +65,16 @@ class Input extends Component {
           value,
           shifted: false,
           layoutName: 'default',
-        }
+        };
       }
 
       return { value };
     }, () => setCaret(this.textareaRef, caretPosition));
-  };
+  }
 
   handleKeyPress(button) {
     if (button === '{copy}') {
-      if (document.execCommand) {
-        this.textareaRef.select();
-        document.execCommand("copy");
-        this.textareaRef.blur();
-      }
+      this.copyTextarea();
     }
 
     if (button === '{shift}') {
@@ -90,7 +90,18 @@ class Input extends Component {
         shifted: false,
       }));
     }
-  };
+  }
+
+  copyTextarea() {
+    // eslint-disable-next-line no-undef
+    const doc = window ? window.document : null;
+
+    if (doc && doc.execCommand) {
+      this.textareaRef.select();
+      doc.execCommand('copy');
+      this.textareaRef.blur();
+    }
+  }
 
   render() {
     const { value, layoutName } = this.state;
@@ -107,7 +118,7 @@ class Input extends Component {
         <div className="mt-4">
           <div className="mb-2">
             <textarea
-              ref={r => (this.textareaRef = r)}
+              ref={(r) => { this.textareaRef = r; }}
               className="form-control input-lg"
               type="text"
               placeholder="Type using the virtual keyboard ..."
@@ -122,15 +133,15 @@ class Input extends Component {
           </div>
           <div>
             <Keyboard
-              ref={r => (this.keyboardRef = r)}
+              ref={(r) => { this.keyboardRef = r; }}
               onChange={this.handleKeyboardChange}
               onKeyPress={this.handleKeyPress}
               layout={layout}
               display={display}
-              mergeDisplay={true}
+              mergeDisplay
               layoutName={layoutName}
-              preventMouseDownDefault={true}
-              newLineOnEnter={true}
+              preventMouseDownDefault
+              newLineOnEnter
             />
           </div>
         </div>
