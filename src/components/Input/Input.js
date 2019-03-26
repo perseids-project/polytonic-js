@@ -6,17 +6,21 @@ const layout = {
     '` 1 2 3 4 5 6 7 8 9 0 \u0313\u0342 \u0313\u0300 {bksp}',
     '{tab} ; ς ε ρ τ υ θ ι ο π \u0342 \u0300 \\',
     '{lock} α σ δ φ γ η ξ κ λ \u0301 \u0313 {enter}',
-    '{shift} ζ χ ψ ω β ν μ , . \u0313\u0301 {shift}',
+    '{shift} ζ χ ψ ω β ν μ , . \u0313\u0301 {copy}',
     '.com @ {space}',
   ],
   shift: [
     '~ ! @ # $ % ^ & * ( ) \u0314\u0342 \u0314\u0300 {bksp}',
     '{tab} : \u0308\u0301 Ε Ρ Τ Υ Θ Ι Ο Π \u0345 \u0300 |',
     '{lock} Α Σ Δ Φ Γ Η Ξ Κ Λ \u0308 \u0314 {enter}',
-    '{shift} Ζ Χ Ψ Ω Β Ν Μ < > \u0314\u0301 {shift}',
+    '{shift} Ζ Χ Ψ Ω Β Ν Μ < > \u0314\u0301 {copy}',
     '.com @ {space}',
   ]
 }
+
+const display = {
+  '{copy}': 'copy',
+};
 
 const setCaret = (elem, pos) => {
   elem.focus();
@@ -43,8 +47,9 @@ class Input extends Component {
 
   handleChange(event) {
     const { value } = event.target;
+    const { setInput } = this.keyboardRef.keyboard;
 
-    this.setState({ value });
+    this.setState({ value }, () => setInput(value));
   };
 
   handleKeyboardChange(value) {
@@ -64,6 +69,14 @@ class Input extends Component {
   };
 
   handleKeyPress(button) {
+    if (button === '{copy}') {
+      if (document.execCommand) {
+        this.textareaRef.select();
+        document.execCommand("copy");
+        this.textareaRef.blur();
+      }
+    }
+
     if (button === '{shift}') {
       this.setState(({ shifted }) => ({
         layoutName: shifted ? 'default' : 'shift',
@@ -113,6 +126,8 @@ class Input extends Component {
               onChange={this.handleKeyboardChange}
               onKeyPress={this.handleKeyPress}
               layout={layout}
+              display={display}
+              mergeDisplay={true}
               layoutName={layoutName}
               preventMouseDownDefault={true}
               newLineOnEnter={true}
