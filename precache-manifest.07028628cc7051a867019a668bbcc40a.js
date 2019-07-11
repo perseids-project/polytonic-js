@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3fed3928314d9e55e4287a9b5bc9d1f1",
+    "revision": "8680a7b9ebaee65e1eb65769fa65346d",
     "url": "/polytonic/index.html"
   },
   {
-    "revision": "47f99ba7a1a5f717ad43",
-    "url": "/polytonic/static/css/2.cfd46faf.chunk.css"
+    "revision": "0d08009c4422770c01b3",
+    "url": "/polytonic/static/css/2.27930603.chunk.css"
   },
   {
     "revision": "82f033102c0a9416e2e8",
     "url": "/polytonic/static/css/main.ee63bc43.chunk.css"
   },
   {
-    "revision": "47f99ba7a1a5f717ad43",
-    "url": "/polytonic/static/js/2.fcb282c8.chunk.js"
+    "revision": "0d08009c4422770c01b3",
+    "url": "/polytonic/static/js/2.8c2956f1.chunk.js"
   },
   {
     "revision": "82f033102c0a9416e2e8",
