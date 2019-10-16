@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Keyboard from 'react-simple-keyboard';
 
 // see https://github.com/yannickcr/eslint-plugin-react/issues/2209
@@ -34,14 +34,14 @@ const setCaret = (elem, pos) => {
 };
 
 class Input extends Component {
-  state = {
-    value: '',
-    layoutName: 'default',
-    shifted: false,
-  };
-
   constructor(props) {
     super(props);
+
+    this.state = {
+      value: '',
+      layoutName: 'default',
+      shifted: false,
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleKeyboardChange = this.handleKeyboardChange.bind(this);
@@ -51,13 +51,13 @@ class Input extends Component {
 
   handleChange(event) {
     const { value } = event.target;
-    const { setInput } = this.keyboardRef.keyboard;
+    const { setInput } = this.keyboardRef;
 
     this.setState({ value }, () => setInput(value));
   }
 
   handleKeyboardChange(value) {
-    const { caretPosition } = this.keyboardRef.keyboard;
+    const { caretPosition } = this.keyboardRef;
 
     this.setState(({ shifted }) => {
       if (shifted) {
@@ -107,7 +107,7 @@ class Input extends Component {
     const { value, layoutName } = this.state;
 
     return (
-      <Fragment>
+      <>
         <div className="row pt-4 mb-3">
           <div className="col-12 text-center">
             <h1 className="h3 font-weight-normal">
@@ -133,7 +133,7 @@ class Input extends Component {
           </div>
           <div>
             <Keyboard
-              ref={(r) => { this.keyboardRef = r; }}
+              keyboardRef={(r) => { this.keyboardRef = r; }}
               onChange={this.handleKeyboardChange}
               onKeyPress={this.handleKeyPress}
               layout={layout}
@@ -145,7 +145,7 @@ class Input extends Component {
             />
           </div>
         </div>
-      </Fragment>
+      </>
     );
   }
 }

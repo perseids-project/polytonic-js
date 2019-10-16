@@ -6,7 +6,7 @@ import Input from '../Input';
 
 const App = () => (
   <Router basename={process.env.PUBLIC_URL}>
-    <React.Fragment>
+    <>
       <PerseidsHeader>
         Greek Polytonic Keyboard
       </PerseidsHeader>
@@ -21,7 +21,7 @@ const App = () => (
         report="https://github.com/perseids-project/polytonic-js"
         github="https://github.com/perseids-project/polytonic-js/issues"
       />
-    </React.Fragment>
+    </>
   </Router>
 );
 
