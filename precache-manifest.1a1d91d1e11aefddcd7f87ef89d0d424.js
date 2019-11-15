@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8680a7b9ebaee65e1eb65769fa65346d",
+    "revision": "5d45e26c0b3cb8a119d3be7557eba6fd",
     "url": "/polytonic/index.html"
   },
   {
-    "revision": "0d08009c4422770c01b3",
-    "url": "/polytonic/static/css/2.27930603.chunk.css"
+    "revision": "196db33212be05f70cd6",
+    "url": "/polytonic/static/css/2.028404da.chunk.css"
   },
   {
-    "revision": "82f033102c0a9416e2e8",
+    "revision": "ca5d5e182d328a5ad179",
     "url": "/polytonic/static/css/main.ee63bc43.chunk.css"
   },
   {
-    "revision": "0d08009c4422770c01b3",
-    "url": "/polytonic/static/js/2.8c2956f1.chunk.js"
+    "revision": "196db33212be05f70cd6",
+    "url": "/polytonic/static/js/2.e53a3b39.chunk.js"
   },
   {
-    "revision": "82f033102c0a9416e2e8",
-    "url": "/polytonic/static/js/main.5ce8263b.chunk.js"
+    "revision": "ca5d5e182d328a5ad179",
+    "url": "/polytonic/static/js/main.85ee7170.chunk.js"
   },
   {
-    "revision": "1e81d3f14efaa8bf218f",
-    "url": "/polytonic/static/js/runtime~main.c13bcaba.js"
+    "revision": "5bfae770c78ec2749d3b",
+    "url": "/polytonic/static/js/runtime-main.007ee75d.js"
   },
   {
     "revision": "01337cbf8cb58f21e1411c4c9ae23c87",
