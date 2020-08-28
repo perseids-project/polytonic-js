@@ -111,7 +111,10 @@ class Input extends Component {
         <div className="row pt-4 mb-3">
           <div className="col-12 text-center">
             <h1 className="h3 font-weight-normal">
-              Polytonic Greek Virtual Keyboard
+              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+              <label htmlFor="polytonic-keyboard-input-and-output" className="mb-0">
+                Polytonic Greek Virtual Keyboard
+              </label>
             </h1>
           </div>
         </div>
@@ -120,6 +123,7 @@ class Input extends Component {
             <textarea
               ref={(r) => { this.textareaRef = r; }}
               className="form-control input-lg"
+              id="polytonic-keyboard-input-and-output"
               type="text"
               placeholder="Type using the virtual keyboard ..."
               autoComplete="off"
