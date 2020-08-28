@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "57e5c7ef5e41ceaea1ad295f4caf42a8",
+    "revision": "ca37edddb1686314de860338c422b599",
     "url": "/polytonic/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/polytonic/static/css/2.b14733d5.chunk.css"
   },
   {
-    "revision": "ebe583c791901739fcc8",
+    "revision": "f79f89a102c9c7453d54",
     "url": "/polytonic/static/css/main.ee63bc43.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/polytonic/static/js/2.08f9f8d0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ebe583c791901739fcc8",
-    "url": "/polytonic/static/js/main.8f221944.chunk.js"
+    "revision": "f79f89a102c9c7453d54",
+    "url": "/polytonic/static/js/main.747e29c7.chunk.js"
   },
   {
     "revision": "a7c82db770c726080207",
