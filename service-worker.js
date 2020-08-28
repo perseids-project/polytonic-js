@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/polytonic/precache-manifest.d975162c3ff1e7ddcc3e804bbad29a4f.js"
+  "/polytonic/precache-manifest.40037b6c4d58b219002a6dab27dd114a.js"
 );
 
 self.addEventListener('message', (event) => {
