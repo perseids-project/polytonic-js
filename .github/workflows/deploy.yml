@@ -44,3 +44,4 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           BRANCH: perseids-build
           FOLDER: build
+          CLEAN: true
