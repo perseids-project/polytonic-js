@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/polytonic-js/static/css/main.ee63bc43.chunk.css",
-    "main.js": "/polytonic-js/static/js/main.de89364c.chunk.js",
-    "main.js.map": "/polytonic-js/static/js/main.de89364c.chunk.js.map",
+    "main.js": "/polytonic-js/static/js/main.dbd0dfd2.chunk.js",
+    "main.js.map": "/polytonic-js/static/js/main.dbd0dfd2.chunk.js.map",
     "runtime-main.js": "/polytonic-js/static/js/runtime-main.6c9841fe.js",
     "runtime-main.js.map": "/polytonic-js/static/js/runtime-main.6c9841fe.js.map",
-    "static/css/2.e3042b10.chunk.css": "/polytonic-js/static/css/2.e3042b10.chunk.css",
-    "static/js/2.d30e2241.chunk.js": "/polytonic-js/static/js/2.d30e2241.chunk.js",
-    "static/js/2.d30e2241.chunk.js.map": "/polytonic-js/static/js/2.d30e2241.chunk.js.map",
+    "static/css/2.670ec396.chunk.css": "/polytonic-js/static/css/2.670ec396.chunk.css",
+    "static/js/2.08f9f8d0.chunk.js": "/polytonic-js/static/js/2.08f9f8d0.chunk.js",
+    "static/js/2.08f9f8d0.chunk.js.map": "/polytonic-js/static/js/2.08f9f8d0.chunk.js.map",
     "index.html": "/polytonic-js/index.html",
-    "precache-manifest.d6ebd9cb95ddfa194b1c2ed4e6852076.js": "/polytonic-js/precache-manifest.d6ebd9cb95ddfa194b1c2ed4e6852076.js",
+    "precache-manifest.ee22ffb95c5828e3eec079c9ffa24544.js": "/polytonic-js/precache-manifest.ee22ffb95c5828e3eec079c9ffa24544.js",
     "service-worker.js": "/polytonic-js/service-worker.js",
-    "static/css/2.e3042b10.chunk.css.map": "/polytonic-js/static/css/2.e3042b10.chunk.css.map",
+    "static/css/2.670ec396.chunk.css.map": "/polytonic-js/static/css/2.670ec396.chunk.css.map",
     "static/css/main.ee63bc43.chunk.css.map": "/polytonic-js/static/css/main.ee63bc43.chunk.css.map",
-    "static/js/2.d30e2241.chunk.js.LICENSE.txt": "/polytonic-js/static/js/2.d30e2241.chunk.js.LICENSE.txt",
+    "static/js/2.08f9f8d0.chunk.js.LICENSE.txt": "/polytonic-js/static/js/2.08f9f8d0.chunk.js.LICENSE.txt",
     "static/media/index.css": "/polytonic-js/static/media/tinos-latin-700italic.ec035d3e.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.6c9841fe.js",
-    "static/css/2.e3042b10.chunk.css",
-    "static/js/2.d30e2241.chunk.js",
+    "static/css/2.670ec396.chunk.css",
+    "static/js/2.08f9f8d0.chunk.js",
     "static/css/main.ee63bc43.chunk.css",
-    "static/js/main.de89364c.chunk.js"
+    "static/js/main.dbd0dfd2.chunk.js"
   ]
 }
